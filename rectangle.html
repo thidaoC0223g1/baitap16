@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width=" 400" height="400" style="border:1px solid black"></canvas>
+    <script>
+
+
+        class Rectangle {
+            constructor(width, height) {
+                this.width = width;
+                this.height = height;
+            }
+            getWidth() {
+                return this.width;
+            }
+            getHeight() {
+                return this.height;
+            }
+            getArea() {
+                return this.width * this.height;
+            }
+            getPeri() {
+                return 2 * (this.width + this.height);
+
+            }
+            setWidth() {
+                return this.width = parseInt(prompt('nhap vao chieu rong'));
+
+            }
+            setHeight() {
+                return this.height = parseInt(prompt('nhap vao chieu cao'));
+
+            }
+        }
+        let rec1 = new Rectangle();
+        rec1.setWidth();
+        rec1.setHeight();
+        let  a= rec1.getWidth();
+        let  b=  rec1.getHeight();
+         // document.write(`${rec1.getWidth()}`)
+        // document.write(`${rec1.getHeight()}`)
+        document.write(`${rec1.getArea()}`)
+
+        // function draw(width, height) {
+            rec1 = document.getElementById('myCanvas');
+            ctx = rec1.getContext('2d')
+            ctx.fillStyle = '#9e2ea6'
+            ctx.fillRect(40, 40, a, b);
+        // }
+        // draw(rec1.getWidth(), rec1.getHeight())
+    </script>
+</body>
+
+</html>
